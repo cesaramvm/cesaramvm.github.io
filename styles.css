@@ -1,0 +1,62 @@
+
+html, body {
+    height: 100%;
+}
+
+
+.all-fluid{
+    background-color:#0c0c0c;
+    height:100%;
+    color:white;
+}
+
+header{
+
+}
+.header-col{
+    height: 5vh;
+}
+
+.contenido{
+}
+.sideBar{
+}
+.mainContent{
+}
+.aside{
+}
+
+footer{
+
+}
+.footer-col{
+    height: 5vh;
+    background-color:#686868;
+}
+
+.article{
+    display:none;
+}
+
+article.is-visible{
+    display:block;
+}
+
+
+
+.header-col{
+    background-color:#686868;
+}
+
+.contenido{
+    background-color:#ff0000;
+}
+.sideBar{
+    background-color: green;
+}
+.mainContent{
+    background-color: blue;
+}
+.aside{
+    background-color: blueviolet;
+}
