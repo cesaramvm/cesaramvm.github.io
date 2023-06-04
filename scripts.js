@@ -3,7 +3,7 @@ $(document).ready(
 
     function () {
 
-        $('.nav-item, .outer-nav li').click(function () {
+        $('.sideNav>.nav>.nav-item').click(function () {
             console.log("HOLAAA")
             if (!($(this).hasClass('active'))) {
 
@@ -45,7 +45,29 @@ $(document).ready(
         }
 
 
-    }
-);
+        $('.toggle').click(function () {
+            console.log("HEY")
+
+            $('.perspective').addClass('perspective--modalview');
+            setTimeout(function () {
+                $('.perspective').addClass('effect-rotate-left--animate');
+            }, 25);
+            $('.outNav').addClass('is-visible');
+
+        });
+
+        $('.outNav>.nav-item').click(function(){
+
+            $('.perspective').removeClass('effect-rotate-left--animate');
+            setTimeout(function(){
+              $('.perspective').removeClass('perspective--modalview');
+            }, 400);
+            
+            $('.outNav').removeClass('is-visible');
+      
+          });
+
+
+    });
 
 
