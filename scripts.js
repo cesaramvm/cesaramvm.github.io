@@ -94,7 +94,6 @@ $(document).ready(
 
         $('.all-fluid').hover(function () {
             if(perspectiveMode){
-                // backToNormalPerspective();
                 document.getElementsByClassName("effect-rotate-left--animate")[0].style.transform = "scale(1.2) translateX(7%)";
             };
         }, function () {
