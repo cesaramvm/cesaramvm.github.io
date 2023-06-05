@@ -1,6 +1,8 @@
 
 $(document).ready(
     function () {
+
+        perspectiveMode = 0;
         function changeArticle(curPos, nextPos) {
             updateNavs(nextPos);
             updateContent(curPos, nextPos);
@@ -32,8 +34,7 @@ $(document).ready(
             changeContentClasses(classSelector, pos, "d-none", "d-flex")
         }
 
-        function backToNormalPerspective() {
-            
+        function backToNormalPerspective() {            
             $('.outNavContainer').addClass('d-none');
             $('.outNavContainer').removeClass('d-block');
             setTimeout(function () {
@@ -42,6 +43,11 @@ $(document).ready(
             setTimeout(function () {
                 $('.perspective').removeClass('perspective--modalview');
             }, 500);
+            setTimeout(function () {
+                document.getElementsByClassName("all-fluid")[0].style.cursor = "default";
+            }, 50);
+
+            perspectiveMode = 0;
         }
 
         function goToPerspective() {
@@ -53,6 +59,13 @@ $(document).ready(
                 $('.outNavContainer').addClass('d-block');
                 $('.outNavContainer').removeClass('d-none');
             }, 400);
+
+            setTimeout(function () {
+                perspectiveMode = 1;
+            }, 250);
+
+            
+            document.getElementsByClassName("all-fluid")[0].style.cursor = "pointer";
 
 
 
@@ -77,6 +90,19 @@ $(document).ready(
 
         $('.back-btn').click(function () {
             backToNormalPerspective();
+        });
+
+        $('.all-fluid').hover(function () {
+            if(perspectiveMode){
+                // backToNormalPerspective();
+                document.getElementsByClassName("effect-rotate-left--animate")[0].style.transform = "scale(1.2) translateX(7%)";
+            };
+        }, function () {
+            if(perspectiveMode){
+                    document.getElementsByClassName("effect-rotate-left--animate")[0].style.transform = "scale(1)";
+                    // translateZ(-1800px) translateX(-35%) rotateY(40deg);
+            };
+
         });
 
         changeArticle(0, 0);

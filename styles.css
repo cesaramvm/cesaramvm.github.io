@@ -96,8 +96,10 @@ footer{
 .perspective--modalview {
     position: fixed;
     -webkit-perspective: 2000px;
-    perspective: 2000px
+    perspective: 2000px;
 }
+
+
 
 .effect-rotate-left .all-fluid {
     -webkit-transform-origin: 0% 50%;
@@ -113,3 +115,4 @@ footer{
     transform: translateZ(-1800px) translateX(-35%) rotateY(40deg);
     outline: 25px solid #0f33ff
 }
+
