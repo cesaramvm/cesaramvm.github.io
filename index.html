@@ -16,12 +16,18 @@
     <div class="perspective effect-rotate-left">
         <div class="container-fluid all-fluid">
 
-            <header class="row text-center">
-                <div class="header-col col"></div>
-                <div class="header-col col"></div>
-                <div class="header-col col">
-                    <!-- <button type="button" class="toggle btn btn-success d-sm-none"> -->
-                    <button type="button" class="toggle btn btn-success">
+            <header class="row text-center mt-3">
+                <div class="header-col col-1">
+                    <button type="button" class="smallMenu btn btn-primary d-md-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-list" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z">
+                            </path>
+                        </svg>
+                    </button>
+                    <button type="button" class="toggle btn btn-success d-none d-md-block">
+                    <!-- <button type="button" class="toggle btn btn-success"> -->
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-list" viewBox="0 0 16 16">
                             <path fill-rule="evenodd"
@@ -32,7 +38,7 @@
                 </div>
             </header>
             <div class="contenido row">
-                <div class="sideNavContainer col-md-2 d-none d-sm-block">
+                <div class="sideNavContainer col-md-2 d-none d-md-none">
                     <nav class="sideNav nav nav-pills flex-md-column nav-fill">
                         <a class="nav-item nav-link" href="#">Quién soy</a>
                         <a class="nav-item nav-link" href="#">Estudios</a>
@@ -42,7 +48,7 @@
                         <a class="nav-item nav-link" href="#">Contacto</a>
                     </nav>
                 </div>
-                <main class="mainContent col-md-10">
+                <main class="mainContent col-md-12">
                     <article class="align-items-center article d-none intro d-flex row">
                         <div class="intro-text col-12 col-md-5 col-lg-5">
                             <p class="text-center align-middle text-break">Soy César Valdés</p>
@@ -51,25 +57,31 @@
                                 src="assets/img/intro-photo.png" alt="" srcset="" /></div>
                         <div class="w-100"></div>
                         <div class="col-12 col-md-4 text-center">
+                            <div class="personalidad p-3">
                             <h3>Personalidad</h3>
                             <p> Soy una persona muy comprometida y empática. Desde pequeño y gracias a mis padres, me he sentido atraido por la informática, y siempre he querido 
                                 trabajar en un proyecto que tuviera un impacto positivo en la vida de las personas y con el auge de la IA creo que esos proyectos están prosperando 
                                 (aplicaciones en medicina, coches autónomos, energías renovables...)
                                 También me considero una persona humilde, ya que soy consciente de mis limitaciones 
                                 y trato de mejorar a diario.</p>
+                            </div>
                         </div>
                         <div class="col-12 col-md-4 text-center">
+                            <div class="trabajo p-3">
                             <h3>Trabajo</h3>
                             <p> Soy proactivo y me implico en mi trabajo. Además soy muy analítico y bastante perfeccionista, lo cual me hace confiar mucho en la calidad y valor de mi trabajo. 
                                 Me considero un buen compañero y siempre remo a favor del buen ambiente laboral. 
                                 La diversidad que existe en la informática me ha llevado a ser una persona muy autodidacta. Además, tengo un buen desempeño en los momentos de mayor carga laboral </p>
-                        </div>
+                            </div>
+                            </div>
                         <div class="col-12 col-md-4 text-center">
+                            <div class="ocio p-3">
                             <h3>Ocio</h3>
                             <p>En mis momentos de ocio disfruto mucho arreglando y restaurando cualquier aparato (electrónico o no). De vez en cuando también me dedico a llevar a la realidad
                                 ideas y proyectos personales. También toco (un poco) el piano y de vez en cuando juego al padel.
                                 Me considero una persona animalista, y disfruto enormemente
                                 de los animales. También me gustan los videjuegos y las buenas películas o series</p>
+                            </div>
                         </div>
                     </article>
                     <article class="article d-none studies">

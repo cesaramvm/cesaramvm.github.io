@@ -85,6 +85,20 @@ $(document).ready(
             goToPerspective();
         });
 
+        $('.smallMenu').click(function () {
+            var sideNavContainer = $(".sideNavContainer")
+            var addClass = "d-flex"
+            var removeClass = "d-none"
+            if (sideNavContainer.hasClass("d-flex")){
+                addClass = "d-none"
+                removeClass = "d-flex"
+            }
+
+            
+            sideNavContainer.addClass(addClass);
+            sideNavContainer.removeClass(removeClass);
+        });
+
         $('.outNav>.nav-item').click(function () {
         });
 
