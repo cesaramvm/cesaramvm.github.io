@@ -1,62 +1,88 @@
 
 $(document).ready(
     function () {
-        function updateNavs(nextPos) {
-            $('nav').children().removeClass('active');
-            $('nav').children().eq(nextPos).addClass('active');
+        function changeArticle(curPos, nextPos) {
+            updateNavs(nextPos);
+            updateContent(curPos, nextPos);
         }
 
-        function updateContent(curPos, nextPos, lastItem) {
-            $('.mainContent').children().removeClass('is-visible');
-            $('.mainContent').children().eq(nextPos).addClass('is-visible');
-            if (nextPos !== 0 && nextPos !== lastItem) {
-                $('.header--cta').addClass('is-active');
-            }
-            else {
-                $('.header--cta').removeClass('is-active');
-            }
+        function updateNavs(pos) {
+            activeMenuOption(".sideNav", pos);
+            activeMenuOption(".outNav", pos);
+        }
+
+        function activeMenuOption(menuClass, pos) {
+            $(menuClass).children().removeClass('active');
+            $(menuClass).children().eq(pos).addClass('active');
+        }
+
+        function updateContent(curPos, nextPos) {
+            makeContentInvisible(".mainContent", curPos);
+            makeContentVisible(".mainContent", nextPos);
+        }
+
+        function changeContentClasses(classSelector, pos, claseAdd, claseRemove) {
+            $(classSelector).children().eq(pos).addClass(claseAdd);
+            $(classSelector).children().eq(pos).removeClass(claseRemove);
+        }
+        function makeContentVisible(classSelector, pos) {
+            changeContentClasses(classSelector, pos, "d-flex", "d-none")
+        }
+        function makeContentInvisible(classSelector, pos) {
+            changeContentClasses(classSelector, pos, "d-none", "d-flex")
+        }
+
+        function backToNormalPerspective() {
+            
+            $('.outNavContainer').addClass('d-none');
+            $('.outNavContainer').removeClass('d-block');
+            setTimeout(function () {
+                $('.perspective').removeClass('effect-rotate-left--animate');
+            }, 150);
+            setTimeout(function () {
+                $('.perspective').removeClass('perspective--modalview');
+            }, 500);
+        }
+
+        function goToPerspective() {
+            $('.perspective').addClass('perspective--modalview');
+            setTimeout(function () {
+                $('.perspective').addClass('effect-rotate-left--animate');
+            }, 25);
+            setTimeout(function () {
+                $('.outNavContainer').addClass('d-block');
+                $('.outNavContainer').removeClass('d-none');
+            }, 400);
+
+
 
         }
 
         $('.nav>.nav-item').click(function () {
-            console.log(".nav>.nav-item")
             if (!($(this).hasClass('active'))) {
                 var $this = $(this)
                 var curActive = $this.parent().find('.active')
                 var curPos = $this.parent().children().index(curActive)
                 var nextPos = $this.parent().children().index($this)
-                var lastItem = $(this).parent().children().length - 1;
-                updateNavs(nextPos);
-                updateContent(curPos, nextPos, lastItem);
-
+                changeArticle(curPos, nextPos)
             }
-
         });
 
-
         $('.toggle').click(function () {
-            console.log(".toggle")
-
-            $('.perspective').addClass('perspective--modalview');
-            setTimeout(function () {
-                $('.perspective').addClass('effect-rotate-left--animate');
-            }, 25);
-            $('.outNav').addClass('is-visible');
-
+            goToPerspective();
         });
 
         $('.outNav>.nav-item').click(function () {
-            console.log(".outNav>.nav-item")
-
-            $('.perspective').removeClass('effect-rotate-left--animate');
-            setTimeout(function () {
-                $('.perspective').removeClass('perspective--modalview');
-            }, 400);
-
-            $('.outNav').removeClass('is-visible');
         });
 
+        $('.back-btn').click(function () {
+            backToNormalPerspective();
+        });
 
+        changeArticle(0, 0);
     });
+
+
+
 
 

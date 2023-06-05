@@ -15,58 +15,79 @@
 <body>
     <div class="perspective effect-rotate-left">
         <div class="container-fluid all-fluid">
-                <header class="row text-center">
-                    <div class="header-col col">H1</div>
-                    <div class="header-col col"><button type="button" class="btn btn-primary">Primary</button></div>
-                    <div class="header-col col">
-                        <!-- <button type="button" class="toggle btn btn-primary d-sm-none"> -->
-                            <button type="button" class="toggle btn btn-primary">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                class="bi bi-list" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd"
-                                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z">
-                                </path>
-                            </svg>
-                        </button>
-                    </div>
-                </header>
-                <div class="contenido row">
-                    <div class="sideNav col-md-2 d-none d-sm-block">
-                        <nav class="nav nav-pills flex-md-column nav-fill">
-                            <a class="nav-item nav-link active" href="#">Quién soy</a>
-                            <a class="nav-item nav-link" href="#">Estudios</a>
-                            <a class="nav-item nav-link" href="#">Trabajos</a>
-                            <a class="nav-item nav-link" href="#">Proyectos</a>
-                            <a class="nav-item nav-link" href="#">Herramientas y librerías</a>
-                            <a class="nav-item nav-link" href="#">Contacto</a>
-                        </nav>
-                        col-md-2
-                    </div>
-                    <main class="mainContent col-md-10 col-lg-8">
-                        <article class="article intro is-visible">intro</article>
-                        <article class="article studies">studies</article>
-                        <article class="article jobs">jobs</article>
-                        <article class="article projects">projects</article>
-                        <article class="article tools">tools</article>
-                        <article class="article contact">contact</article>
-                        content col-md10 lg-8
-                    </main>
-                    <aside class="aside d-none d-lg-block col-md-2">aside col-md2</aside>
+
+            <header class="row text-center">
+                <div class="header-col col"></div>
+                <div class="header-col col"></div>
+                <div class="header-col col">
+                    <!-- <button type="button" class="toggle btn btn-success d-sm-none"> -->
+                        <button type="button" class="toggle btn btn-success">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-list" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z">
+                            </path>
+                        </svg>
+                    </button>
                 </div>
-                <footer class="row text-center">
-                    <div class="footer-col col">F1</div>
-                    <div class="footer-col col">F2</div>
-                    <div class="footer-col col">F3</div>
-                </footer>
+            </header>
+            <div class="contenido row">
+                <div class="sideNavContainer col-md-2 d-none d-sm-block">
+                    <nav class="sideNav nav nav-pills flex-md-column nav-fill">
+                        <a class="nav-item nav-link" href="#">Quién soy</a>
+                        <a class="nav-item nav-link" href="#">Estudios</a>
+                        <a class="nav-item nav-link" href="#">Trabajos</a>
+                        <a class="nav-item nav-link" href="#">Proyectos</a>
+                        <a class="nav-item nav-link" href="#">Herramientas y librerías</a>
+                        <a class="nav-item nav-link" href="#">Contacto</a>
+                    </nav>
+                </div>
+                <main class="mainContent col-md-10">
+                    <article class="article d-none intro d-flex row">
+                        <div class="intro-text col-12 col-md-5 col-lg-5">
+                            <p class="text-center align-middle text-break">Soy César Valdés</p>
+                        </div>
+                        <div class="intro-foto col-12 col-md-7 col-lg-5"><img class="img-fluid"
+                                src="assets/img/intro-photo.png" alt="" srcset="" /></div>
+                        <div class="col-12 col-md-4">aspodjfasop</div>
+                        <div class="col-12 col-md-4">aspodjfasop</div>
+                        <div class="col-12 col-md-4">aspodjfasop</div>
+                    </article>
+                    <article class="article d-none studies">
+                        <button type="button" class="contact-button btn btn-primary">Contacto</button>studies
+                    </article>
+                    <article class="article d-none jobs"><button type="button"
+                            class="contact-button btn btn-primary">Contacto</button>jobs</article>
+                    <article class="article d-none projects"><button type="button"
+                            class="contact-button btn btn-primary">Contacto</button>projects</article>
+                    <article class="article d-none tools"><button type="button"
+                            class="contact-button btn btn-primary">Contacto</button>tools</article>
+                    <article class="article d-none contact">
+                            <div class="color-overlay d-flex justify-content-center align-items-center">TEST</div>
+</div>
+
+                    </article>
+                </main>
+            </div>
+            <footer class="row text-center">
+                <div class="footer-col col">F1</div>
+                <div class="footer-col col">F2</div>
+                <div class="footer-col col">F3</div>
+            </footer>
 
         </div>
     </div>
-    <div class="container-fluid">
+    <div class="container-fluid outNavContainer d-none">
         <div class="row">
             <div class="col-7"></div>
             <div class="col-4">
+                <button type="button" class="back-btn btn btn-danger">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                      </svg>
+                </button>
                 <nav class="outNav flex-column nav nav-pills">
-                    <a class="nav-item nav-link active" href="#">Quién soy</a>
+                    <a class="nav-item nav-link" href="#">Quién soy</a>
                     <a class="nav-item nav-link" href="#">Estudios</a>
                     <a class="nav-item nav-link" href="#">Trabajos</a>
                     <a class="nav-item nav-link" href="#">Proyectos</a>

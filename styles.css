@@ -34,24 +34,34 @@ footer{
     background-color:#686868;
 }
 
-.article{
-    display:none;
+
+.intro-text{
+    font-size:10vw;
 }
 
-.is-visible{
-    display:block;
+@media (min-width: 768px) {
+    .intro-text{
+        font-size:8vw;
+    }
+}
+
+
+.intro-foto{
+    margin: auto;    
+    display: block;
 }
 
 
 
-.header-col{
+
+/* .header-col{
     background-color:#686868;
 }
 
 .contenido{
     background-color:#ff0000;
 }
-.sideNav{
+.sideNavContainer{
     background-color: green;
 }
 .mainContent{
@@ -59,16 +69,19 @@ footer{
 }
 .aside{
     background-color: blueviolet;
+} */
+
+.back-btn{
+    position:relative;
+    top:25vh;
+    left:40%;
 }
 
 .outNav{
-    /* visibility: hidden; */
     position:relative;
-    margin-top:33vh;
+    margin-top:30vh;
     background-color: blueviolet;
 }
-
-
 
 
 
