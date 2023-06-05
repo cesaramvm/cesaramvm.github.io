@@ -100,9 +100,16 @@ $(document).ready(
         }, function () {
             if(perspectiveMode){
                     document.getElementsByClassName("effect-rotate-left--animate")[0].style.transform = "scale(1)";
-                    // translateZ(-1800px) translateX(-35%) rotateY(40deg);
             };
 
+        });
+
+
+        $('.all-fluid').click(function () {
+            if(perspectiveMode){
+                document.getElementsByClassName("effect-rotate-left--animate")[0].style.transform = "scale(1)";
+                backToNormalPerspective();
+            };
         });
 
         changeArticle(0, 0);
