@@ -1,33 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>César Valdés</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="normalize.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
 
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
+    <script src="./assets/js/bootstrap-detect-breakpoint.js"></script>
 </head>
-
 <body>
     <div class="perspective effect-rotate-left">
         <div class="container-fluid all-fluid">
-
             <header class="row text-center mt-3">
                 <div class="header-col col-1">
-                    <button type="button" class="smallMenu btn btn-primary d-md-none">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-list" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z">
-                            </path>
-                        </svg>
-                    </button>
+                    <div class="dropdown d-md-none">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-list" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z">
+                                </path>
+                            </svg>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <a class="dropdown-item" href="#">Quién soy</a>
+                            <a class="dropdown-item" href="#">Estudios</a>
+                            <a class="dropdown-item" href="#">Trabajos</a>
+                            <a class="dropdown-item" href="#">Proyectos</a>
+                            <a class="dropdown-item" href="#">Herramientas y librerías</a>
+                            <a class="dropdown-item" href="#">Contacto</a>
+                        </ul>
+                    </div>
                     <button type="button" class="toggle btn btn-success d-none d-md-block">
-                    <!-- <button type="button" class="toggle btn btn-success"> -->
+                        <!-- <button type="button" class="toggle btn btn-success"> -->
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-list" viewBox="0 0 16 16">
                             <path fill-rule="evenodd"
@@ -38,16 +53,6 @@
                 </div>
             </header>
             <div class="contenido row">
-                <div class="sideNavContainer col-md-2 d-none d-md-none">
-                    <nav class="sideNav nav nav-pills flex-md-column nav-fill">
-                        <a class="nav-item nav-link" href="#">Quién soy</a>
-                        <a class="nav-item nav-link" href="#">Estudios</a>
-                        <a class="nav-item nav-link" href="#">Trabajos</a>
-                        <a class="nav-item nav-link" href="#">Proyectos</a>
-                        <a class="nav-item nav-link" href="#">Herramientas y librerías</a>
-                        <a class="nav-item nav-link" href="#">Contacto</a>
-                    </nav>
-                </div>
                 <main class="mainContent col-md-12">
                     <article class="align-items-center article d-none intro d-flex row">
                         <div class="intro-text col-12 col-md-5 col-lg-5">
@@ -58,29 +63,37 @@
                         <div class="w-100"></div>
                         <div class="col-12 col-md-4 text-center">
                             <div class="personalidad p-3">
-                            <h3>Personalidad</h3>
-                            <p> Soy una persona muy comprometida y empática. Desde pequeño y gracias a mis padres, me he sentido atraido por la informática, y siempre he querido 
-                                trabajar en un proyecto que tuviera un impacto positivo en la vida de las personas y con el auge de la IA creo que esos proyectos están prosperando 
-                                (aplicaciones en medicina, coches autónomos, energías renovables...)
-                                También me considero una persona humilde, ya que soy consciente de mis limitaciones 
-                                y trato de mejorar a diario.</p>
+                                <h3>Personalidad</h3>
+                                <p> Soy una persona muy comprometida y empática. Desde pequeño y gracias a mis padres,
+                                    me he sentido atraido por la informática, y siempre he querido
+                                    trabajar en un proyecto que tuviera un impacto positivo en la vida de las personas y
+                                    con el auge de la IA creo que esos proyectos están prosperando
+                                    (aplicaciones en medicina, coches autónomos, energías renovables...)
+                                    También me considero una persona humilde, ya que soy consciente de mis limitaciones
+                                    y trato de mejorar a diario.</p>
                             </div>
                         </div>
                         <div class="col-12 col-md-4 text-center">
                             <div class="trabajo p-3">
-                            <h3>Trabajo</h3>
-                            <p> Soy proactivo y me implico en mi trabajo. Además soy muy analítico y bastante perfeccionista, lo cual me hace confiar mucho en la calidad y valor de mi trabajo. 
-                                Me considero un buen compañero y siempre remo a favor del buen ambiente laboral. 
-                                La diversidad que existe en la informática me ha llevado a ser una persona muy autodidacta. Además, tengo un buen desempeño en los momentos de mayor carga laboral </p>
+                                <h3>Trabajo</h3>
+                                <p> Soy proactivo y me implico en mi trabajo. Además soy muy analítico y bastante
+                                    perfeccionista, lo cual me hace confiar mucho en la calidad y valor de mi trabajo.
+                                    Me considero un buen compañero y siempre remo a favor del buen ambiente laboral.
+                                    La diversidad que existe en la informática me ha llevado a ser una persona muy
+                                    autodidacta. Además, tengo un buen desempeño en los momentos de mayor carga laboral
+                                </p>
                             </div>
-                            </div>
+                        </div>
                         <div class="col-12 col-md-4 text-center">
                             <div class="ocio p-3">
-                            <h3>Ocio</h3>
-                            <p>En mis momentos de ocio disfruto mucho arreglando y restaurando cualquier aparato (electrónico o no). De vez en cuando también me dedico a llevar a la realidad
-                                ideas y proyectos personales. También toco (un poco) el piano y de vez en cuando juego al padel.
-                                Me considero una persona animalista, y disfruto enormemente
-                                de los animales. También me gustan los videjuegos y las buenas películas o series</p>
+                                <h3>Ocio</h3>
+                                <p>En mis momentos de ocio disfruto mucho arreglando y restaurando cualquier aparato
+                                    (electrónico o no). De vez en cuando también me dedico a llevar a la realidad
+                                    ideas y proyectos personales. También toco (un poco) el piano y de vez en cuando
+                                    juego al padel.
+                                    Me considero una persona animalista, y disfruto enormemente
+                                    de los animales. También me gustan los videjuegos y las buenas películas o series
+                                </p>
                             </div>
                         </div>
                     </article>
@@ -90,19 +103,24 @@
                     <article class="article d-none jobs">
                         <button type="button" class="contact-button btn btn-primary">Contacto</button>
                     </article>
-                    <article class="article d-none projects"><button type="button"
-                            class="contact-button btn btn-primary">Contacto</button>projects</article>
-                    <article class="article d-none tools"><button type="button"
-                            class="contact-button btn btn-primary">Contacto</button>tools</article>
+                    <article class="article d-none projects">
+                        <button type="button"
+                            class="contact-button btn btn-primary">Contacto
+                        </button>
+                    </article>
+                    <article class="article d-none tools">
+                        <button type="button" class="contact-button btn btn-primary">Contacto
+                        </button>
+                    </article>
                     <article class="article d-none contact">
                         <div class="color-overlay d-flex justify-content-center align-items-center">TEST</div>
                     </article>
                 </main>
             </div>
             <footer class="row text-center">
-                <div class="footer-col col">F1</div>
-                <div class="footer-col col">F2</div>
-                <div class="footer-col col">F3</div>
+                <div class="footer-col col"></div>
+                <div class="footer-col col">Footer</div>
+                <div class="footer-col col"></div>
             </footer>
         </div>
     </div>
@@ -111,11 +129,12 @@
             <div class="col-7"></div>
             <div class="col-4">
                 <button type="button" class="back-btn btn btn-danger">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x"
-                        viewBox="0 0 16 16">
-                        <path
-                            d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-arrow-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
                     </svg>
+                    Volver a vista completa
                 </button>
                 <nav class="outNav flex-column nav nav-pills">
                     <a class="nav-item nav-link" href="#">Quién soy</a>
@@ -129,19 +148,5 @@
             <div class="col1"></div>
         </div>
     </div>
-
 </body>
-<script src="https://code.jquery.com/jquery-3.7.0.min.js"
-    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-<script src="scripts.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-    crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-    crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
-    integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
-    crossorigin="anonymous"></script>
-
 </html>

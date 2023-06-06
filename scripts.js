@@ -1,15 +1,24 @@
 
 $(document).ready(
     function () {
-
         perspectiveMode = 0;
+        bootstrapBreakpoint = bootstrapDetectBreakpoint()["name"]
+        console.log("Current BreakPoint: " + bootstrapBreakpoint)
+        
+        $( window ).on( "resize", function() {
+            currentBp = bootstrapDetectBreakpoint()["name"]
+            if(bootstrapBreakpoint != currentBp){
+                console.log(bootstrapBreakpoint = currentBp)
+            }
+          } );
+          
         function changeArticle(curPos, nextPos) {
             updateNavs(nextPos);
             updateContent(curPos, nextPos);
         }
 
         function updateNavs(pos) {
-            activeMenuOption(".sideNav", pos);
+            activeMenuOption(".dropdown-menu", pos);
             activeMenuOption(".outNav", pos);
         }
 
@@ -71,7 +80,7 @@ $(document).ready(
 
         }
 
-        $('.nav>.nav-item').click(function () {
+        $('.nav>.nav-item, .dropdown-menu>.dropdown-item').click(function () {
             if (!($(this).hasClass('active'))) {
                 var $this = $(this)
                 var curActive = $this.parent().find('.active')
@@ -85,21 +94,13 @@ $(document).ready(
             goToPerspective();
         });
 
-        $('.smallMenu').click(function () {
-            var sideNavContainer = $(".sideNavContainer")
-            var addClass = "d-flex"
-            var removeClass = "d-none"
-            if (sideNavContainer.hasClass("d-flex")){
-                addClass = "d-none"
-                removeClass = "d-flex"
-            }
-
-            
-            sideNavContainer.addClass(addClass);
-            sideNavContainer.removeClass(removeClass);
-        });
-
         $('.outNav>.nav-item').click(function () {
+            
+            document.getElementsByClassName("effect-rotate-left--animate")[0].style.transform = "scale(1.05) translateX(2%)";
+
+            setTimeout(function () {
+                document.getElementsByClassName("effect-rotate-left--animate")[0].style.transform = "scale(1)";
+            }, 500);
         });
 
         $('.back-btn').click(function () {

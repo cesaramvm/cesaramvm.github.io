@@ -32,7 +32,6 @@ footer{
 }
 .footer-col{
     height: 5vh;
-    background-color:#686868;
 }
 
 
@@ -70,7 +69,15 @@ footer{
 }
 .aside{
     background-color: blueviolet;
-} */
+}
+.footer-col{
+    height: 5vh;
+    background-color:#686868;
+}
+.outNav{
+    background-color: blueviolet;
+}
+ */
 
 .back-btn{
     position:relative;
@@ -81,7 +88,6 @@ footer{
 .outNav{
     position:relative;
     margin-top:30vh;
-    background-color: blueviolet;
 }
 
 
