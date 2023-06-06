@@ -2,13 +2,20 @@
 $(document).ready(
     function () {
         perspectiveMode = 0;
-        bootstrapBreakpoint = bootstrapDetectBreakpoint()["name"]
-        console.log("Current BreakPoint: " + bootstrapBreakpoint)
+        currentBreackpoint = bootstrapDetectBreakpoint()["name"]
+        console.log("Current BreakPoint: " + currentBreackpoint)
+        bootstrapBreakpoints = ["xs","sm","md","lg","xl","xxl"]
         
         $( window ).on( "resize", function() {
-            currentBp = bootstrapDetectBreakpoint()["name"]
-            if(bootstrapBreakpoint != currentBp){
-                console.log(bootstrapBreakpoint = currentBp)
+            newBreakpoint = bootstrapDetectBreakpoint()["name"]
+            if(currentBreackpoint != newBreakpoint){
+                console.log(currentBreackpoint = newBreakpoint)
+                if (bootstrapBreakpoints.indexOf(currentBreackpoint)<2 && perspectiveMode){
+                    backToNormalPerspective();
+                    setTimeout(function () {
+                        $('.dropdown-toggle').click();
+                    }, 500);
+                }
             }
           } );
           
